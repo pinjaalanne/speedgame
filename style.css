@@ -17,6 +17,15 @@ h1 {
     text-shadow: 4px 4px 2px rgba(195, 54, 54, 0.87);
 }
 
+h2 {
+    font-size: 2rem;
+    text-shadow: 4px 4px 2px rgba(195, 54, 54, 0.87);
+}
+
+img {
+    border-radius: 20px;
+}
+
 #score {
     margin-top: 30px;
     color: rgb(181, 43, 43);
@@ -55,6 +64,11 @@ audio {
     cursor: pointer;
 }
 
+.clowncircle.number {
+    background-image: url(giphy2.gif);
+    background-size: cover;
+}
+
 .btn {
     background-color: rgb(155, 11, 11);
     color: white;
@@ -73,11 +87,39 @@ audio {
     background-color: rgb(155, 11, 11, 0.5);
 }
 
-.clowncircle.number {
-    background-image: url(giphy2.gif);
-    background-size: cover;
+.modal {
+    background-color: rgba(0, 0, 0, 0.739);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
 }
 
-img {
-    border-radius: 20px;
+.modal.visible {
+    display: flex;
+}
+
+.modalcontent {
+    background-color: rgb(155, 11, 11);
+    color: white;
+    margin: 3rem;
+    padding: 3rem;
+    border-radius: 10px;
+    max-width: 600px;
+    position: relative;
+}
+
+#xButton {
+    background-color: white;
+    color: black;
+    text-shadow: 1px 1px 2.5px rgba(122, 10, 10, 0.873);
+    box-shadow: 2px 2px 3px rgba(89, 78, 78, 0.736);
+    padding: 0.5rem;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
 }
