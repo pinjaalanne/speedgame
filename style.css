@@ -43,7 +43,7 @@ img.visible {
     margin: 30px 0;
     color: white;
     font-size: 1.7rem;
-    text-shadow: 2px 2px 1px rgba(162, 27, 27, 0.881);
+    text-shadow: 3px 3px 1px rgba(162, 27, 27, 0.881);
 }
 
 #score.visible {
@@ -96,8 +96,8 @@ img.visible {
     font-family: inherit;
     font-size: 2rem;
     border-radius: 15px;
-    margin: 40px 40px 20px;
-    padding: 16px;
+    margin: 40px 20px 20px;
+    padding: 1.5rem;
 }
 
 .btn:hover {
@@ -132,13 +132,6 @@ img.visible {
 #xButton:hover,
 #closeButton:hover {
     background-color: rgba(220, 198, 198, 0.859);
-}
-
-#instButton {
-    font-size: 1rem;
-    border-radius: 10px;
-    margin: 0 0 20px;
-    background: rgb(109, 14, 14);
 }
 
 #instButton.notvisible {
