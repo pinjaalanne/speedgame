@@ -14,21 +14,28 @@
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
   />
     <link rel="stylesheet" href="style.css" />
-    <title>Speed Game</title>
+    <title>Clown Game</title>
   </head>
   <body>
     <audio src="">
       <a href=""></a>
     </audio>
-    <h1>The Clown Game</h1>
+    <h1>The Clown Killer</h1>
     <p><a href="https://giphy.com/gifs/creepy-aCRTblAWKJroc">via GIPHY</a></p>
     <img
     src="giphy.webp"
     width="auto"
-    height="200"
+    height="350"
     ></img>
-    <p id="score">Score: <span class="score">0</span></p>
-    <div class="circle-container">
+    <audio id="backaudio">  <source src="background.mp3" type="audio/mp3"></audio>
+    <audio id="clownlaugh">  <source src="clownlaugh.mp3" type="audio/mp3"></audio>
+    <audio id="what">  <source src="ohno.mp3" type="audio/mp3"></audio>
+    <audio id="scream">  <source src="scream.mp3" type="audio/mp3"></audio>
+    <audio id="gameover">  <source src="gameover.mp3" type="audio/mp3"></audio>
+    <audio id="thekiller">  <source src="thekiller.mp3" type="audio/mp3"></audio>
+    <div class="container">
+      <p id="score">Clowns killed: <span class="score">0</span></p>
+      <div class="clown-container">
         <div id="first" class="clowncircle"></div>
         <div id="second" class="clowncircle"></div>
         <div id="third" class="clowncircle"></div>
@@ -36,16 +43,36 @@
     </div>
     <button id="play" class="btn">Let's play!</button>
     <button id="stop" class="btn">Please stop!</button>
+    <div>
+    <button id="instButton" class="btn">Instructions</button>
+    </div>
+    <div id="instmodal" class="instmodal">
+      <div id="instmodalcontent" class="instmodalcontent">
+      <h2 id="instmodalheader">Instructions for the game</h2>
+      <p id="instmodaltext">
+      <ul>
+        <lh>The rules are simple:</lh>
+        <li>When you see a clown, stick it with the knife.</li>
+        <li>Now you have killed a clown, Congratulations.</li>
+        <li>You get one point per killing.</li>
+        <li>If you kill over 15 clowns, you're the clown killer!</li>
+      </ul></p>
+      <button id="closeButton" class="btn">
+        <span class="material-symbols-outlined"> close </span>
+    </button>
+      </div>
+      </div>
     <div class="modal">
         <div class="modalcontent">
-        <h2 id="modalheader">iuehdr</h2>
-        <p id="modaltext">wfbshjbfhwebgwhb</p>
-        <p id="modalscore">Score: <span class="score">0</span></p>
+        <h2 id="modalheader"></h2>
+        <p id="modaltext"></p>
+        <p id="modalscore">Clowns killed: <span class="mscore">0</span></p>
         <button id="xButton" class="btn">
             <span class="material-symbols-outlined"> close </span>
         </button>
     </div>
     </div>
+  </div>
     <script src="main.js"></script>
   </body>
 </html>

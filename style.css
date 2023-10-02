@@ -12,79 +12,145 @@ body {
 }
 
 h1 {
-    margin: 70px 0 15px;
+    margin: 60px 0 15px;
     font-size: 5rem;
     text-shadow: 4px 4px 2px rgba(195, 54, 54, 0.87);
 }
 
 h2 {
-    font-size: 2rem;
-    text-shadow: 4px 4px 2px rgba(195, 54, 54, 0.87);
+    font-size: 2.5rem;
+    margin: 30px 0;
+    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.873);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 0.2rem;
+    margin-top: 0;
 }
 
 img {
     border-radius: 20px;
 }
 
+img.visible {
+    display:none;
+}
+
 #score {
-    margin-top: 30px;
-    color: rgb(181, 43, 43);
+    display: none;
+    margin: 30px 0;
+    color: white;
     font-size: 1.7rem;
-    text-shadow: 1px 1px 1px rgba(255, 254, 254, 0.82);
+    text-shadow: 2px 2px 1px rgba(162, 27, 27, 0.881);
 }
 
-a {
-    text-decoration: none;
-    color: rgb(74, 17, 17);
-    font-size: 0.2rem;
-    margin-top: 0;
+#score.visible {
+    display: inline-block;
 }
 
-audio {
-    display: block;
-}
-
-.circle-container {
-    display: flex;
+.clown-container {
+    display: none;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
+.clown-container.visible {
+    display: flex;
+}
+
 .clowncircle {
     justify-content: center;
     align-items: center;
-    background: rgb(155, 11, 11);
-    height: 120px;
-    width: 120px;
-    border-radius: 50%;
-    margin: 30px 20px 40px;
+    background: rgb(0, 0, 0);
+    height: 200px;
+    width: 200px;
+    border-radius: 40%;
+    margin: 30px 20px 30px;
     pointer-events: none;
-    cursor: pointer;
+    cursor: url(knife_100x100.png), pointer;
 }
 
 .clowncircle.number {
-    background-image: url(giphy2.gif);
+    background-image: url(close.webp);
     background-size: cover;
+    box-shadow: inset 5px 5px 5px rgba(95, 12, 12, 0.667), 2px 2px 3px rgba(125, 53, 53, 0.856);
+}
+
+.clowncircle.number.blood {
+    background-image: url(blood.png);
+}
+
+.clowncircle:hover {
+    height: 205px;
+    width: 205px;
+    transition: all 0.01s;
 }
 
 .btn {
     background-color: rgb(155, 11, 11);
     color: white;
     text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.873);
-    box-shadow: 3px 3px 3px rgba(163, 73, 73, 0.736);
+    box-shadow: inset 5px 5px 10px rgba(158, 113, 113, 0.893), 3px 3px 3px rgba(116, 54, 54, 0.86);
     cursor: pointer;
     border-style: none;
     font-family: inherit;
-    font-size: 1.7rem;
-    border-radius: 10px;
-    margin: 10px;
-    padding: 15px;
+    font-size: 2rem;
+    border-radius: 15px;
+    margin: 40px 40px 20px;
+    padding: 16px;
 }
 
 .btn:hover {
     background-color: rgb(155, 11, 11, 0.5);
+}
+
+#stop {
+    display: none;
+}
+
+#stop.visible {
+    display: inline-block;
+}
+
+#play.notvisible {
+    display: none;
+}
+
+#xButton,
+#closeButton {
+    background-color: white;
+    color: black;
+    text-shadow: 1px 1px 2.5px rgba(122, 10, 10, 0.873);
+    box-shadow: inset 2px 2px 2px rgba(75, 14, 14, 0.893), 3px 3px 2px rgba(30, 4, 4, 0.86);
+    padding: 0.3rem;
+    position: absolute;
+    top: 0.2rem;
+    right: 0.2rem;
+    border-radius: 10px;
+}
+
+#xButton:hover,
+#closeButton:hover {
+    background-color: rgba(220, 198, 198, 0.859);
+}
+
+#instButton {
+    font-size: 1rem;
+    border-radius: 10px;
+    margin: 0 0 20px;
+    background: rgb(77, 8, 8);
+}
+
+#instButton.notvisible {
+    display: none;
+}
+
+#instButton:hover {
+    background: rgba(67, 6, 6, 0.705);
 }
 
 .modal {
@@ -104,22 +170,63 @@ audio {
 }
 
 .modalcontent {
-    background-color: rgb(155, 11, 11);
+    background-color: rgb(130, 12, 12);
     color: white;
+    box-shadow: inset 5px 5px 10px rgba(152, 101, 101, 0.893), 5px 5px 3px rgba(104, 45, 45, 0.86);
     margin: 3rem;
-    padding: 3rem;
-    border-radius: 10px;
-    max-width: 600px;
+    padding: 5rem;
+    border-radius: 20px;
+    max-width: 700px;
     position: relative;
 }
 
-#xButton {
-    background-color: white;
-    color: black;
-    text-shadow: 1px 1px 2.5px rgba(122, 10, 10, 0.873);
-    box-shadow: 2px 2px 3px rgba(89, 78, 78, 0.736);
-    padding: 0.5rem;
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
+#modaltext {
+    font-size: 1.3rem;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.873);
+}
+
+#modalscore {
+    font-size: 1.5rem;
+    margin: 30px 0;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.873);
+}
+
+.instmodal {
+    background-color: rgba(0, 0, 0, 0.739);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.instmodal.visible {
+    display: flex;
+}
+
+.instmodalcontent {
+    background-color: rgb(130, 12, 12);
+    color: white;
+    box-shadow: inset 5px 5px 10px rgba(152, 101, 101, 0.893), 5px 5px 3px rgba(116, 54, 54, 0.86);
+    margin: 3rem;
+    padding: 5rem;
+    border-radius: 20px;
+    max-width: 700px;
+    position: relative;
+}
+
+ul lh {
+    font-size: 2rem;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.873);
+    line-height: 4rem;
+}
+
+ul li{
+    font-size: 1.5rem;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.873);
+    list-style-type: none;
+    line-height: 3rem;
 }
