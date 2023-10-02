@@ -206,7 +206,7 @@ img.visible {
 .instmodalcontent {
     background-color: rgb(130, 12, 12);
     color: white;
-    border: 7px dotted rgb(248, 247, 247, 0.7);
+    border: 10px dotted rgb(248, 247, 247, 0.7);
     box-shadow: inset 5px 5px 10px rgba(143, 67, 67, 0.893), 5px 5px 3px rgba(101, 36, 36, 0.86);
     margin: 3rem;
     padding: 5rem;
