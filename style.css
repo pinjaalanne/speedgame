@@ -84,12 +84,6 @@ img.visible {
     background-image: url(blood.png);
 }
 
-.clowncircle:hover {
-    height: 205px;
-    width: 205px;
-    transition: all 0.01s;
-}
-
 .btn {
     background-color: rgb(155, 11, 11);
     color: white;
@@ -142,7 +136,7 @@ img.visible {
     font-size: 1rem;
     border-radius: 10px;
     margin: 0 0 20px;
-    background: rgb(77, 8, 8);
+    background: rgb(109, 14, 14);
 }
 
 #instButton.notvisible {
@@ -150,7 +144,7 @@ img.visible {
 }
 
 #instButton:hover {
-    background: rgba(67, 6, 6, 0.705);
+    background: rgba(107, 9, 9, 0.705);
 }
 
 .modal {
@@ -172,7 +166,7 @@ img.visible {
 .modalcontent {
     background-color: rgb(130, 12, 12);
     color: white;
-    box-shadow: inset 5px 5px 10px rgba(141, 68, 68, 0.893), 5px 5px 3px rgba(95, 31, 31, 0.86);
+    box-shadow: inset 5px 5px 10px rgba(144, 77, 77, 0.893), 5px 5px 3px rgba(95, 31, 31, 0.86);
     margin: 3rem;
     padding: 5rem;
     border-radius: 20px;
@@ -210,6 +204,7 @@ img.visible {
 .instmodalcontent {
     background-color: rgb(130, 12, 12);
     color: white;
+    border: 7px dotted rgb(248, 247, 247, 0.7);
     box-shadow: inset 5px 5px 10px rgba(143, 67, 67, 0.893), 5px 5px 3px rgba(101, 36, 36, 0.86);
     margin: 3rem;
     padding: 5rem;
@@ -218,15 +213,18 @@ img.visible {
     position: relative;
 }
 
+ul {
+    color: white;
+    text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.873);
+}
+
 ul lh {
     font-size: 2rem;
-    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.873);
     line-height: 4rem;
 }
 
 ul li{
     font-size: 1.5rem;
-    text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.873);
     list-style-type: none;
     line-height: 3rem;
 }
