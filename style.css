@@ -82,6 +82,8 @@ img.visible {
 
 .clowncircle.number.blood {
     background-image: url(blood.png);
+    box-shadow: none;
+    border-radius: 30px;
 }
 
 .btn {
