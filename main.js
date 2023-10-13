@@ -1,3 +1,4 @@
+// getting the data from index
 const playButton = document.querySelector('#play')
 const stopButton = document.querySelector('#stop')
 const closeButton = document.querySelector('#closeButton')
@@ -20,16 +21,19 @@ const killerAudio = document.querySelector('#thekiller')
 const circleContainer = document.querySelector('.clown-container')
 const clownImg = document.querySelector('img')
 
+// declaring necessary variables
 let score = 0;
 let timer;
 let pace = 1000;
 let number = 0;
 let rounds = 0;
 
+// getting random number to randomize the clowns
 const getRandomI = (min, max) => {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
+// function for clicking the clown and score
 const clickClown = (i) => {
     if (i === number) {
         clowns[number].classList.add('blood');
@@ -47,12 +51,14 @@ clowns.forEach((clowncircle, i) => {
     clowncircle.addEventListener('click', () => clickClown(i))
 })
 
+// clicking possible only while game on
 const enableEvents = () => {
     clowns.forEach(clowncircle => {
         clowncircle.style.pointerEvents = "auto"
     })
 }
 
+// function for playing the game
 const playGame = () => {
     backAudio.play()
     clownAudio.play()
@@ -91,6 +97,7 @@ const playGame = () => {
     }
 }
 
+// conditional modal for every action
 const modalBox = () => {
     clownAudio.pause()
     backAudio.pause()
@@ -112,16 +119,19 @@ const modalBox = () => {
     }
 }
 
+// function for stopping the game
 const stopGame = () => {
     modal.classList.toggle('visible')
     modalBox()
     clearTimeout(timer)
 }
 
+// function for resetting the game
 const resetGame = () => {
     window.location.reload()
 }
 
+// function for instructions modal
 const instModal = () => {
     instrModal.classList.toggle('visible')
 }
